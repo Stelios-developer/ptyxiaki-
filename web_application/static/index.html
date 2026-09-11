@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Attack Detection</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Network Attack Detection</div>
+    <div class="status">Local application</div>
+  </header>
+  <main>
+    <section class="panel controls">
+      <h1>Ανάλυση δικτυακής κίνησης</h1>
+      <p>Ανέβασε ένα συμβατό CSV και επίλεξε dataset και μοντέλο.</p>
+      <form id="analysis-form">
+        <label for="dataset">Dataset</label>
+        <select id="dataset" name="dataset">
+          <option value="CICIDS2017">CICIDS2017</option>
+          <option value="UNSW-NB15">UNSW-NB15</option>
+        </select>
+        <label for="model">Μοντέλο</label>
+        <select id="model" name="model">
+          <option value="Random Forest">Random Forest</option>
+          <option value="Logistic Regression">Logistic Regression</option>
+          <option value="Linear SVM">Linear SVM</option>
+          <option value="kNN">kNN</option>
+          <option value="ANN">ANN</option>
+          <option value="Compare all models">Compare all models</option>
+        </select>
+        <label for="file">Αρχείο CSV</label>
+        <input id="file" name="file" type="file" accept=".csv" required>
+        <button type="submit">Ανάλυση αρχείου</button>
+      </form>
+      <div id="message"></div>
+    </section>
+    <section id="results" class="hidden">
+      <div class="metrics">
+        <article class="metric"><span>Αναλυμένες εγγραφές</span><strong id="rows">0</strong></article>
+        <article class="metric"><span>Προβλέψεις attack</span><strong id="attacks">0</strong></article>
+        <article class="metric"><span>Ποσοστό attack</span><strong id="rate">0%</strong></article>
+      </div>
+      <section class="panel">
+        <h2>Σύνοψη αποτελεσμάτων</h2>
+        <div id="summary"></div>
+      </section>
+      <section class="panel">
+        <h2>Κατανομή προβλέψεων</h2>
+        <div id="bars"></div>
+      </section>
+      <section class="panel">
+        <h2>Προβλέψεις ανά εγγραφή</h2>
+        <div class="table-wrap"><table id="preview"></table></div>
+        <a id="download" class="download" href="#">Λήψη αποτελεσμάτων CSV</a>
+      </section>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
