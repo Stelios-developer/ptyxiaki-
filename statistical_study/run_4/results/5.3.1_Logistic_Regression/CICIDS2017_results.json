@@ -1,0 +1,53 @@
+{
+  "dataset": "CICIDS2017",
+  "model": "Logistic Regression",
+  "training_rows": 595062,
+  "testing_rows": 755822,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "candidate_C_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "mean_f1_scores": {
+      "0.001": 0.6882632468569055,
+      "0.01": 0.7025741736717203,
+      "0.1": 0.796799167925017,
+      "1.0": 0.9137051045942698,
+      "10.0": 0.9231142009104198,
+      "100.0": 0.9236299086453625,
+      "1000.0": 0.9235924112168643
+    },
+    "selected_C": 100.0,
+    "tuning_seconds": 16.980848799983505
+  },
+  "metrics": {
+    "accuracy": 0.9096017316246418,
+    "precision": 0.6633962389160658,
+    "recall": 0.9422803949401237,
+    "f1_score": 0.7786191276961809,
+    "roc_auc": 0.9608490609611142,
+    "average_precision": 0.8930317369473076,
+    "false_positive_rate": 0.0970302828703711
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      567344,
+      60965
+    ],
+    [
+      7360,
+      120153
+    ]
+  ],
+  "training_seconds": 1.2343022999702953,
+  "prediction_seconds": 0.12279710004804656
+}

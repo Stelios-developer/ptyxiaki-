@@ -1,0 +1,108 @@
+{
+  "CICIDS2017": {
+    "dataset": "CICIDS2017",
+    "model": "Logistic Regression",
+    "training_rows": 595062,
+    "testing_rows": 755822,
+    "input_features": 20,
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "candidate_C_values": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "mean_f1_scores": {
+        "0.001": 0.7803437487058448,
+        "0.01": 0.788728659159883,
+        "0.1": 0.8445667275955335,
+        "1.0": 0.9034647042217827,
+        "10.0": 0.9295203855873924,
+        "100.0": 0.9302886894562651,
+        "1000.0": 0.9303977411840664
+      },
+      "selected_C": 1000.0,
+      "tuning_seconds": 31.865055999951437
+    },
+    "metrics": {
+      "accuracy": 0.9147087541775709,
+      "precision": 0.6750535866993925,
+      "recall": 0.9533537756934587,
+      "f1_score": 0.7904224711064874,
+      "roc_auc": 0.9642184660067871,
+      "average_precision": 0.897407152882422,
+      "false_positive_rate": 0.09313411076397123
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        569792,
+        58517
+      ],
+      [
+        5948,
+        121565
+      ]
+    ],
+    "training_seconds": 2.4473480999586172,
+    "prediction_seconds": 0.12495020002825186
+  },
+  "UNSW_NB15": {
+    "dataset": "UNSW_NB15",
+    "model": "Logistic Regression",
+    "training_rows": 95146,
+    "testing_rows": 45981,
+    "input_features": 20,
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "candidate_C_values": [
+        0.001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        1000.0
+      ],
+      "mean_f1_scores": {
+        "0.001": 0.7998729190559845,
+        "0.01": 0.8059481710393527,
+        "0.1": 0.8117458676303874,
+        "1.0": 0.8131903404883304,
+        "10.0": 0.8165915834383242,
+        "100.0": 0.8157887427867486,
+        "1000.0": 0.8147421530465037
+      },
+      "selected_C": 10.0,
+      "tuning_seconds": 3.9936838999856263
+    },
+    "metrics": {
+      "accuracy": 0.8052673930536526,
+      "precision": 0.7488791189657424,
+      "recall": 0.8437883172298789,
+      "f1_score": 0.793505834601725,
+      "roc_auc": 0.8938967105045992,
+      "average_precision": 0.8394380078912166,
+      "false_positive_rate": 0.2254220068771491
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        19823,
+        5769
+      ],
+      [
+        3185,
+        17204
+      ]
+    ],
+    "training_seconds": 0.5450249999994412,
+    "prediction_seconds": 0.0069432000163942575
+  }
+}

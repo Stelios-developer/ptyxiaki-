@@ -1,0 +1,134 @@
+{
+  "CICIDS2017": {
+    "dataset": "CICIDS2017",
+    "model": "Artificial Neural Network",
+    "training_rows": 595062,
+    "testing_rows": 755822,
+    "input_features": 20,
+    "architecture": {
+      "hidden_layers": [
+        128,
+        64
+      ],
+      "activation": "relu",
+      "optimizer": "adam",
+      "batch_size": 256,
+      "learning_rate_init": 0.001,
+      "maximum_epochs": 150,
+      "early_stopping": true,
+      "validation_fraction": 0.1,
+      "n_iter_no_change": 10
+    },
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "tuning_rows": 80000,
+      "candidate_alpha_values": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "mean_f1_scores": {
+        "1e-05": 0.9802455427923075,
+        "0.0001": 0.9799513775216946,
+        "0.001": 0.978842902345403,
+        "0.01": 0.9708821183969162
+      },
+      "selected_alpha": 1e-05,
+      "tuning_seconds": 174.08145800000057
+    },
+    "training_history": {
+      "epochs_completed": 66,
+      "best_validation_score": 0.9961181037524997
+    },
+    "metrics": {
+      "accuracy": 0.9962702858609567,
+      "precision": 0.982397635480177,
+      "recall": 0.9957337683216613,
+      "f1_score": 0.9890207472435026,
+      "roc_auc": 0.9997472229483095,
+      "average_precision": 0.9987918679762608,
+      "false_positive_rate": 0.003620829878292369
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        626034,
+        2275
+      ],
+      [
+        544,
+        126969
+      ]
+    ],
+    "training_seconds": 144.02658710000105,
+    "prediction_seconds": 0.7568980000214651
+  },
+  "UNSW_NB15": {
+    "dataset": "UNSW_NB15",
+    "model": "Artificial Neural Network",
+    "training_rows": 95146,
+    "testing_rows": 45981,
+    "input_features": 20,
+    "architecture": {
+      "hidden_layers": [
+        128,
+        64
+      ],
+      "activation": "relu",
+      "optimizer": "adam",
+      "batch_size": 256,
+      "learning_rate_init": 0.001,
+      "maximum_epochs": 150,
+      "early_stopping": true,
+      "validation_fraction": 0.1,
+      "n_iter_no_change": 10
+    },
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "tuning_rows": 80000,
+      "candidate_alpha_values": [
+        1e-05,
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "mean_f1_scores": {
+        "1e-05": 0.899181346090693,
+        "0.0001": 0.8984437865506676,
+        "0.001": 0.8996198286146561,
+        "0.01": 0.8980672547861719
+      },
+      "selected_alpha": 0.001,
+      "tuning_seconds": 96.43527249997715
+    },
+    "training_history": {
+      "epochs_completed": 51,
+      "best_validation_score": 0.9003678402522333
+    },
+    "metrics": {
+      "accuracy": 0.9003066483982515,
+      "precision": 0.8640866159870998,
+      "recall": 0.9198587473637746,
+      "f1_score": 0.8911008694825866,
+      "roc_auc": 0.9734935312409336,
+      "average_precision": 0.9673797716348146,
+      "false_positive_rate": 0.1152703969990622
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        22642,
+        2950
+      ],
+      [
+        1634,
+        18755
+      ]
+    ],
+    "training_seconds": 17.907325600041077,
+    "prediction_seconds": 0.055195199965965
+  }
+}

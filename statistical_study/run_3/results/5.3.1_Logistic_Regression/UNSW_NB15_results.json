@@ -1,0 +1,53 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "Logistic Regression",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "candidate_C_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "mean_f1_scores": {
+      "0.001": 0.7983016825897172,
+      "0.01": 0.8043830932149816,
+      "0.1": 0.8129964941907076,
+      "1.0": 0.8150080168386094,
+      "10.0": 0.8179694326432708,
+      "100.0": 0.8179744704300785,
+      "1000.0": 0.8176036584648698
+    },
+    "selected_C": 100.0,
+    "tuning_seconds": 4.098483500012662
+  },
+  "metrics": {
+    "accuracy": 0.8073987081620669,
+    "precision": 0.7474361724951727,
+    "recall": 0.8543332188925401,
+    "f1_score": 0.7973177095253353,
+    "roc_auc": 0.8952505604075137,
+    "average_precision": 0.8399968836261572,
+    "false_positive_rate": 0.22999374804626446
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      19706,
+      5886
+    ],
+    [
+      2970,
+      17419
+    ]
+  ],
+  "training_seconds": 0.5066466999705881,
+  "prediction_seconds": 0.007305300037842244
+}

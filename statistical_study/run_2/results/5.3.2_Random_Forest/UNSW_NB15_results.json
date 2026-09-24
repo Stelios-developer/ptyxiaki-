@@ -1,0 +1,187 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "Random Forest",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "tuning_rows": 80000,
+    "candidate_count": 6,
+    "candidate_scores": [
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 150
+        },
+        "mean_f1_score": 0.9184057572757099
+      },
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9194531003963186
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9179118524625799
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9187514823300836
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9174907355022532
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9179306477807098
+      }
+    ],
+    "selected_parameters": {
+      "n_estimators": 200,
+      "max_depth": 20,
+      "min_samples_split": 5,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "tuning_seconds": 65.40040869999211
+  },
+  "metrics": {
+    "accuracy": 0.9184010787064222,
+    "precision": 0.8966289991894341,
+    "recall": 0.9223110500760214,
+    "f1_score": 0.9092887191141628,
+    "roc_auc": 0.9816096614502199,
+    "average_precision": 0.9775437162936768,
+    "false_positive_rate": 0.08471397311659894
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      23424,
+      2168
+    ],
+    [
+      1584,
+      18805
+    ]
+  ],
+  "feature_importances": [
+    {
+      "feature": "sttl",
+      "importance": 0.19703356295786523
+    },
+    {
+      "feature": "ct_state_ttl",
+      "importance": 0.13912413223857004
+    },
+    {
+      "feature": "dload",
+      "importance": 0.0731346024086512
+    },
+    {
+      "feature": "dttl",
+      "importance": 0.06297479036360985
+    },
+    {
+      "feature": "ct_srv_dst",
+      "importance": 0.05733243731327669
+    },
+    {
+      "feature": "ct_dst_src_ltm",
+      "importance": 0.05627228249315171
+    },
+    {
+      "feature": "tcprtt",
+      "importance": 0.04960461092779664
+    },
+    {
+      "feature": "sbytes",
+      "importance": 0.048456977163604795
+    },
+    {
+      "feature": "smean",
+      "importance": 0.042989156540418794
+    },
+    {
+      "feature": "synack",
+      "importance": 0.042365162897672136
+    },
+    {
+      "feature": "ackdat",
+      "importance": 0.040691915640850874
+    },
+    {
+      "feature": "dinpkt",
+      "importance": 0.0379381339052784
+    },
+    {
+      "feature": "dmean",
+      "importance": 0.037306705870921664
+    },
+    {
+      "feature": "dbytes",
+      "importance": 0.03211738139070183
+    },
+    {
+      "feature": "ct_srv_src",
+      "importance": 0.02938840539773672
+    },
+    {
+      "feature": "sloss",
+      "importance": 0.016913836276116215
+    },
+    {
+      "feature": "service_-",
+      "importance": 0.01657172655786794
+    },
+    {
+      "feature": "dloss",
+      "importance": 0.00977043015049048
+    },
+    {
+      "feature": "response_body_len",
+      "importance": 0.0055932607076553086
+    },
+    {
+      "feature": "service_http",
+      "importance": 0.004420488797763586
+    }
+  ],
+  "training_seconds": 2.8162102000205778,
+  "prediction_seconds": 0.1726263000164181
+}

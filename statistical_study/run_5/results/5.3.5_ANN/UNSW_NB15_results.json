@@ -1,0 +1,66 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "Artificial Neural Network",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "architecture": {
+    "hidden_layers": [
+      128,
+      64
+    ],
+    "activation": "relu",
+    "optimizer": "adam",
+    "batch_size": 256,
+    "learning_rate_init": 0.001,
+    "maximum_epochs": 150,
+    "early_stopping": true,
+    "validation_fraction": 0.1,
+    "n_iter_no_change": 10
+  },
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "tuning_rows": 80000,
+    "candidate_alpha_values": [
+      1e-05,
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "mean_f1_scores": {
+      "1e-05": 0.8998737378515577,
+      "0.0001": 0.8987884057156011,
+      "0.001": 0.897034121260445,
+      "0.01": 0.8970472604479243
+    },
+    "selected_alpha": 1e-05,
+    "tuning_seconds": 139.50444089999655
+  },
+  "training_history": {
+    "epochs_completed": 33,
+    "best_validation_score": 0.9002627430373095
+  },
+  "metrics": {
+    "accuracy": 0.8959135295013158,
+    "precision": 0.8698620395391836,
+    "recall": 0.8998970032860857,
+    "f1_score": 0.8846246564775083,
+    "roc_auc": 0.9696715754934147,
+    "average_precision": 0.9628246466531263,
+    "false_positive_rate": 0.10726008127539856
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      22847,
+      2745
+    ],
+    [
+      2041,
+      18348
+    ]
+  ],
+  "training_seconds": 11.429839599994011,
+  "prediction_seconds": 0.04397810000227764
+}

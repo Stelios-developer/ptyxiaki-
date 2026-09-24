@@ -1,0 +1,138 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "k-Nearest Neighbors",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "tuning_rows": 50000,
+    "candidate_count": 14,
+    "candidate_scores": [
+      {
+        "parameters": {
+          "n_neighbors": 3,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8913918424736869
+      },
+      {
+        "parameters": {
+          "n_neighbors": 3,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8918517306100472
+      },
+      {
+        "parameters": {
+          "n_neighbors": 5,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8937741934402204
+      },
+      {
+        "parameters": {
+          "n_neighbors": 5,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8941254315779035
+      },
+      {
+        "parameters": {
+          "n_neighbors": 7,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8958820208378239
+      },
+      {
+        "parameters": {
+          "n_neighbors": 7,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.896630905113731
+      },
+      {
+        "parameters": {
+          "n_neighbors": 9,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8960939765632219
+      },
+      {
+        "parameters": {
+          "n_neighbors": 9,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8969621155269526
+      },
+      {
+        "parameters": {
+          "n_neighbors": 11,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8966740858174765
+      },
+      {
+        "parameters": {
+          "n_neighbors": 11,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8976898802252006
+      },
+      {
+        "parameters": {
+          "n_neighbors": 15,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8986594368185683
+      },
+      {
+        "parameters": {
+          "n_neighbors": 15,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8994642445459262
+      },
+      {
+        "parameters": {
+          "n_neighbors": 21,
+          "weights": "uniform"
+        },
+        "mean_f1_score": 0.8982134392784059
+      },
+      {
+        "parameters": {
+          "n_neighbors": 21,
+          "weights": "distance"
+        },
+        "mean_f1_score": 0.8995443996891983
+      }
+    ],
+    "selected_neighbors": 21,
+    "selected_weights": "distance",
+    "tuning_seconds": 24.124646699987352
+  },
+  "metrics": {
+    "accuracy": 0.9056349361692874,
+    "precision": 0.8861514772399192,
+    "recall": 0.9032321349747413,
+    "f1_score": 0.8946102839377231,
+    "roc_auc": 0.9714340454143773,
+    "average_precision": 0.9607821825739874,
+    "false_positive_rate": 0.09245076586433261
+  },
+  "decision_rule": "argmax_probability",
+  "confusion_matrix": [
+    [
+      23226,
+      2366
+    ],
+    [
+      1973,
+      18416
+    ]
+  ],
+  "training_seconds": 0.276054700021632,
+  "prediction_seconds": 2.775831000006292
+}

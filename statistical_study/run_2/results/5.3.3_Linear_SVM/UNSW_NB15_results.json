@@ -1,0 +1,53 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "Linear SVM",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "candidate_C_values": [
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      1000.0
+    ],
+    "mean_f1_scores": {
+      "0.001": 0.81299490559164,
+      "0.01": 0.821198191380306,
+      "0.1": 0.829484052494489,
+      "1.0": 0.8386944482312662,
+      "10.0": 0.8413998495300409,
+      "100.0": 0.8420781756374547,
+      "1000.0": 0.8420852066823746
+    },
+    "selected_C": 1000.0,
+    "tuning_seconds": 11.27872549998574
+  },
+  "metrics": {
+    "accuracy": 0.8152715251951893,
+    "precision": 0.7325513196480938,
+    "recall": 0.9188778262788758,
+    "f1_score": 0.8152032025063093,
+    "roc_auc": 0.8946332167721684,
+    "average_precision": 0.8359972918183834,
+    "false_positive_rate": 0.26727102219443577
+  },
+  "decision_threshold": 0.0,
+  "confusion_matrix": [
+    [
+      18752,
+      6840
+    ],
+    [
+      1654,
+      18735
+    ]
+  ],
+  "training_seconds": 2.041823600011412,
+  "prediction_seconds": 0.005828600027598441
+}

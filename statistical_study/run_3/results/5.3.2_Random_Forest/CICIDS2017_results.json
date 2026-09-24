@@ -1,0 +1,187 @@
+{
+  "dataset": "CICIDS2017",
+  "model": "Random Forest",
+  "training_rows": 595062,
+  "testing_rows": 755822,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "tuning_rows": 80000,
+    "candidate_count": 6,
+    "candidate_scores": [
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 150
+        },
+        "mean_f1_score": 0.9987500136285984
+      },
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9987375118150571
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9986873625560602
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9986748973667346
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9985376437344335
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9985501511048916
+      }
+    ],
+    "selected_parameters": {
+      "n_estimators": 150,
+      "max_depth": 20,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "tuning_seconds": 50.25197649997426
+  },
+  "metrics": {
+    "accuracy": 0.9991439783441075,
+    "precision": 0.9955161154248754,
+    "recall": 0.9994275093519877,
+    "f1_score": 0.9974679779436224,
+    "roc_auc": 0.9999740119225219,
+    "average_precision": 0.9998794038894897,
+    "false_positive_rate": 0.00091356323083069
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      627735,
+      574
+    ],
+    [
+      73,
+      127440
+    ]
+  ],
+  "feature_importances": [
+    {
+      "feature": "Average Packet Size",
+      "importance": 0.17199959668394976
+    },
+    {
+      "feature": "Bwd Packet Length Std",
+      "importance": 0.12659769679286897
+    },
+    {
+      "feature": "Total Length of Bwd Packets",
+      "importance": 0.1027547358441951
+    },
+    {
+      "feature": "Destination Port",
+      "importance": 0.09993349772807521
+    },
+    {
+      "feature": "Subflow Bwd Bytes",
+      "importance": 0.08317525234930338
+    },
+    {
+      "feature": "Init_Win_bytes_backward",
+      "importance": 0.06231413736888195
+    },
+    {
+      "feature": "Total Length of Fwd Packets",
+      "importance": 0.05561935169933004
+    },
+    {
+      "feature": "Init_Win_bytes_forward",
+      "importance": 0.05068688549804117
+    },
+    {
+      "feature": "Fwd Packet Length Min",
+      "importance": 0.03839635432007605
+    },
+    {
+      "feature": "Total Fwd Packets",
+      "importance": 0.03700096698170709
+    },
+    {
+      "feature": "Min Packet Length",
+      "importance": 0.03628032113152749
+    },
+    {
+      "feature": "Fwd IAT Min",
+      "importance": 0.025027075142319954
+    },
+    {
+      "feature": "PSH Flag Count",
+      "importance": 0.01834117205107878
+    },
+    {
+      "feature": "URG Flag Count",
+      "importance": 0.01721177054978993
+    },
+    {
+      "feature": "Bwd IAT Max",
+      "importance": 0.016661559263192276
+    },
+    {
+      "feature": "Bwd Header Length",
+      "importance": 0.015811025273732085
+    },
+    {
+      "feature": "ACK Flag Count",
+      "importance": 0.014929096664371335
+    },
+    {
+      "feature": "Bwd IAT Total",
+      "importance": 0.013247138702287605
+    },
+    {
+      "feature": "Bwd IAT Mean",
+      "importance": 0.012200086308488959
+    },
+    {
+      "feature": "FIN Flag Count",
+      "importance": 0.001812279646783074
+    }
+  ],
+  "training_seconds": 22.885675900033675,
+  "prediction_seconds": 1.8497697999700904
+}

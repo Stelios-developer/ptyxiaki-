@@ -1,0 +1,376 @@
+{
+  "CICIDS2017": {
+    "dataset": "CICIDS2017",
+    "model": "Random Forest",
+    "training_rows": 595062,
+    "testing_rows": 755822,
+    "input_features": 20,
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "tuning_rows": 80000,
+      "candidate_count": 6,
+      "candidate_scores": [
+        {
+          "parameters": {
+            "max_depth": 20,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "n_estimators": 150
+          },
+          "mean_f1_score": 0.9987996576979095
+        },
+        {
+          "parameters": {
+            "max_depth": 20,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 5,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9987119411082679
+        },
+        {
+          "parameters": {
+            "max_depth": null,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9987621515945028
+        },
+        {
+          "parameters": {
+            "max_depth": null,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 5,
+            "n_estimators": 250
+          },
+          "mean_f1_score": 0.9987369745844769
+        },
+        {
+          "parameters": {
+            "max_depth": 30,
+            "max_features": 0.7,
+            "min_samples_leaf": 2,
+            "min_samples_split": 2,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9987249165395413
+        },
+        {
+          "parameters": {
+            "max_depth": 30,
+            "max_features": 0.7,
+            "min_samples_leaf": 2,
+            "min_samples_split": 5,
+            "n_estimators": 250
+          },
+          "mean_f1_score": 0.9986247274277634
+        }
+      ],
+      "selected_parameters": {
+        "n_estimators": 150,
+        "max_depth": 20,
+        "min_samples_split": 2,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+      },
+      "tuning_seconds": 63.50103320000926
+    },
+    "metrics": {
+      "accuracy": 0.9992868691305625,
+      "precision": 0.9963256563003268,
+      "recall": 0.9994588787025637,
+      "f1_score": 0.9978898080469175,
+      "roc_auc": 0.9999722562526002,
+      "average_precision": 0.9998920301926425,
+      "false_positive_rate": 0.0007480395792516103
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        627839,
+        470
+      ],
+      [
+        69,
+        127444
+      ]
+    ],
+    "feature_importances": [
+      {
+        "feature": "Packet Length Std",
+        "importance": 0.1426795610889936
+      },
+      {
+        "feature": "Average Packet Size",
+        "importance": 0.10660808076360952
+      },
+      {
+        "feature": "Packet Length Variance",
+        "importance": 0.10191189330098084
+      },
+      {
+        "feature": "Bwd Packet Length Mean",
+        "importance": 0.07773698460945715
+      },
+      {
+        "feature": "Destination Port",
+        "importance": 0.07500063144764722
+      },
+      {
+        "feature": "Packet Length Mean",
+        "importance": 0.06107766143272789
+      },
+      {
+        "feature": "Init_Win_bytes_backward",
+        "importance": 0.0588722571505296
+      },
+      {
+        "feature": "Max Packet Length",
+        "importance": 0.04792785433078899
+      },
+      {
+        "feature": "Fwd Packet Length Max",
+        "importance": 0.04649765269202858
+      },
+      {
+        "feature": "Avg Fwd Segment Size",
+        "importance": 0.03925904452496387
+      },
+      {
+        "feature": "Fwd Packet Length Mean",
+        "importance": 0.03816502180559115
+      },
+      {
+        "feature": "Total Fwd Packets",
+        "importance": 0.03376684801108149
+      },
+      {
+        "feature": "Init_Win_bytes_forward",
+        "importance": 0.03297223011616956
+      },
+      {
+        "feature": "Total Length of Fwd Packets",
+        "importance": 0.03049886121378186
+      },
+      {
+        "feature": "Fwd IAT Std",
+        "importance": 0.029192157063450862
+      },
+      {
+        "feature": "Fwd IAT Min",
+        "importance": 0.02075546276127667
+      },
+      {
+        "feature": "URG Flag Count",
+        "importance": 0.018449040335531974
+      },
+      {
+        "feature": "Bwd Packets/s",
+        "importance": 0.017549125209988393
+      },
+      {
+        "feature": "Bwd Header Length",
+        "importance": 0.011953312198701853
+      },
+      {
+        "feature": "ACK Flag Count",
+        "importance": 0.00912631994269894
+      }
+    ],
+    "training_seconds": 29.40857250004774,
+    "prediction_seconds": 2.191495400038548
+  },
+  "UNSW_NB15": {
+    "dataset": "UNSW_NB15",
+    "model": "Random Forest",
+    "training_rows": 95146,
+    "testing_rows": 45981,
+    "input_features": 20,
+    "cross_validation": {
+      "folds": 3,
+      "scoring": "f1",
+      "tuning_rows": 80000,
+      "candidate_count": 6,
+      "candidate_scores": [
+        {
+          "parameters": {
+            "max_depth": 20,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "n_estimators": 150
+          },
+          "mean_f1_score": 0.9186365646656532
+        },
+        {
+          "parameters": {
+            "max_depth": 20,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 5,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9188316188242319
+        },
+        {
+          "parameters": {
+            "max_depth": null,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 2,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9179116125201396
+        },
+        {
+          "parameters": {
+            "max_depth": null,
+            "max_features": "sqrt",
+            "min_samples_leaf": 1,
+            "min_samples_split": 5,
+            "n_estimators": 250
+          },
+          "mean_f1_score": 0.9184235873566254
+        },
+        {
+          "parameters": {
+            "max_depth": 30,
+            "max_features": 0.7,
+            "min_samples_leaf": 2,
+            "min_samples_split": 2,
+            "n_estimators": 200
+          },
+          "mean_f1_score": 0.9177943448297392
+        },
+        {
+          "parameters": {
+            "max_depth": 30,
+            "max_features": 0.7,
+            "min_samples_leaf": 2,
+            "min_samples_split": 5,
+            "n_estimators": 250
+          },
+          "mean_f1_score": 0.9181639039680363
+        }
+      ],
+      "selected_parameters": {
+        "n_estimators": 200,
+        "max_depth": 20,
+        "min_samples_split": 5,
+        "min_samples_leaf": 1,
+        "max_features": "sqrt"
+      },
+      "tuning_seconds": 59.86677520000376
+    },
+    "metrics": {
+      "accuracy": 0.9204019051347295,
+      "precision": 0.901656662665066,
+      "recall": 0.9209377605571631,
+      "f1_score": 0.9111952249235696,
+      "roc_auc": 0.9821362089417717,
+      "average_precision": 0.9787675366337223,
+      "false_positive_rate": 0.08002500781494216
+    },
+    "decision_threshold": 0.5,
+    "confusion_matrix": [
+      [
+        23544,
+        2048
+      ],
+      [
+        1612,
+        18777
+      ]
+    ],
+    "feature_importances": [
+      {
+        "feature": "sttl",
+        "importance": 0.20492686794801115
+      },
+      {
+        "feature": "dload",
+        "importance": 0.08376815374505966
+      },
+      {
+        "feature": "dttl",
+        "importance": 0.08098178038017016
+      },
+      {
+        "feature": "ct_dst_src_ltm",
+        "importance": 0.06705555194866478
+      },
+      {
+        "feature": "tcprtt",
+        "importance": 0.06271285229064431
+      },
+      {
+        "feature": "dmean",
+        "importance": 0.059000752719248456
+      },
+      {
+        "feature": "dbytes",
+        "importance": 0.058273721108977466
+      },
+      {
+        "feature": "ackdat",
+        "importance": 0.058197398331499194
+      },
+      {
+        "feature": "synack",
+        "importance": 0.05195015457446278
+      },
+      {
+        "feature": "sbytes",
+        "importance": 0.050284965630981136
+      },
+      {
+        "feature": "ct_srv_dst",
+        "importance": 0.04846858664055373
+      },
+      {
+        "feature": "smean",
+        "importance": 0.04810451486281294
+      },
+      {
+        "feature": "ct_srv_src",
+        "importance": 0.032865997733495
+      },
+      {
+        "feature": "spkts",
+        "importance": 0.02350048336043729
+      },
+      {
+        "feature": "service_-",
+        "importance": 0.017839619069230334
+      },
+      {
+        "feature": "sloss",
+        "importance": 0.017159376748289847
+      },
+      {
+        "feature": "ct_dst_ltm",
+        "importance": 0.015801041892475075
+      },
+      {
+        "feature": "dloss",
+        "importance": 0.008993842258534989
+      },
+      {
+        "feature": "response_body_len",
+        "importance": 0.0055389993173179455
+      },
+      {
+        "feature": "service_http",
+        "importance": 0.0045753394391336785
+      }
+    ],
+    "training_seconds": 2.6209903999697417,
+    "prediction_seconds": 0.18429379997542128
+  }
+}

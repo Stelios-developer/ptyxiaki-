@@ -1,0 +1,187 @@
+{
+  "dataset": "UNSW_NB15",
+  "model": "Random Forest",
+  "training_rows": 95146,
+  "testing_rows": 45981,
+  "input_features": 20,
+  "cross_validation": {
+    "folds": 3,
+    "scoring": "f1",
+    "tuning_rows": 80000,
+    "candidate_count": 6,
+    "candidate_scores": [
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 150
+        },
+        "mean_f1_score": 0.9183432101966731
+      },
+      {
+        "parameters": {
+          "max_depth": 20,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9176168367511671
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.9174965175001687
+      },
+      {
+        "parameters": {
+          "max_depth": null,
+          "max_features": "sqrt",
+          "min_samples_leaf": 1,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9176781583245236
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 2,
+          "n_estimators": 200
+        },
+        "mean_f1_score": 0.917708659922094
+      },
+      {
+        "parameters": {
+          "max_depth": 30,
+          "max_features": 0.7,
+          "min_samples_leaf": 2,
+          "min_samples_split": 5,
+          "n_estimators": 250
+        },
+        "mean_f1_score": 0.9177793239710264
+      }
+    ],
+    "selected_parameters": {
+      "n_estimators": 150,
+      "max_depth": 20,
+      "min_samples_split": 2,
+      "min_samples_leaf": 1,
+      "max_features": "sqrt"
+    },
+    "tuning_seconds": 70.71855779999169
+  },
+  "metrics": {
+    "accuracy": 0.9218372806159065,
+    "precision": 0.9040950868581877,
+    "recall": 0.9214772671538575,
+    "f1_score": 0.9127034248239009,
+    "roc_auc": 0.9823906113924126,
+    "average_precision": 0.9788430586790086,
+    "false_positive_rate": 0.07787589871834949
+  },
+  "decision_threshold": 0.5,
+  "confusion_matrix": [
+    [
+      23599,
+      1993
+    ],
+    [
+      1601,
+      18788
+    ]
+  ],
+  "feature_importances": [
+    {
+      "feature": "sttl",
+      "importance": 0.18358432639024558
+    },
+    {
+      "feature": "ct_state_ttl",
+      "importance": 0.14971157519099598
+    },
+    {
+      "feature": "dload",
+      "importance": 0.07035590544623443
+    },
+    {
+      "feature": "ct_dst_src_ltm",
+      "importance": 0.05760328118521169
+    },
+    {
+      "feature": "tcprtt",
+      "importance": 0.05511302607719051
+    },
+    {
+      "feature": "sbytes",
+      "importance": 0.04926135662863957
+    },
+    {
+      "feature": "ackdat",
+      "importance": 0.04804164702579679
+    },
+    {
+      "feature": "ct_srv_dst",
+      "importance": 0.047658199538710734
+    },
+    {
+      "feature": "dttl",
+      "importance": 0.04743785302027775
+    },
+    {
+      "feature": "dbytes",
+      "importance": 0.04587693142189331
+    },
+    {
+      "feature": "smean",
+      "importance": 0.04530977979411483
+    },
+    {
+      "feature": "synack",
+      "importance": 0.0388613761255495
+    },
+    {
+      "feature": "dinpkt",
+      "importance": 0.03592503632762928
+    },
+    {
+      "feature": "dmean",
+      "importance": 0.03489981672684625
+    },
+    {
+      "feature": "ct_srv_src",
+      "importance": 0.033472944863752956
+    },
+    {
+      "feature": "service_-",
+      "importance": 0.01722217510504318
+    },
+    {
+      "feature": "dloss",
+      "importance": 0.010989460586817688
+    },
+    {
+      "feature": "ct_dst_ltm",
+      "importance": 0.01069563364068202
+    },
+    {
+      "feature": "ct_src_ltm",
+      "importance": 0.010112043838543415
+    },
+    {
+      "feature": "ct_src_dport_ltm",
+      "importance": 0.007867631065824715
+    }
+  ],
+  "training_seconds": 3.417826199962292,
+  "prediction_seconds": 0.16034090000903234
+}
